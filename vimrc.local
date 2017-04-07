@@ -1,0 +1,13 @@
+set textwidth=0
+set relativenumber
+
+nmap <leader>vr :sp $MYVIMRC<cr>
+nmap <leader>vrl :sp $MYVIMRC.local<cr>
+nmap <leader>so :source $MYVIMRC<cr>
+
+" instead of reaching for esc when in insert, just jk or kj
+imap jk <esc>
+imap kj <esc>
+
+nmap k gk
+nmap j gj
