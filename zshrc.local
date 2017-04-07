@@ -7,10 +7,4 @@ set -o vi
 
 source ~/perl5/perlbrew/etc/bashrc
 
-alias gd='git diff'
-alias gs='git status --short'
-alias ga='git add'
-alias gai='git add --interactive'
-alias gci='git commit'
-
 bindkey -v
