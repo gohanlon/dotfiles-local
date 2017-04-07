@@ -1,0 +1,16 @@
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+if which pyenv-vitualenv > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
+
+. `brew --prefix`/etc/profile.d/z.sh
+
+set -o vi
+
+source ~/perl5/perlbrew/etc/bashrc
+
+alias gd='git diff'
+alias gs='git status --short'
+alias ga='git add'
+alias gai='git add --interactive'
+alias gci='git commit'
+
+bindkey -v
