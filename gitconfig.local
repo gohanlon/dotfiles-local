@@ -2,3 +2,6 @@
   name = Galen O’Hanlon
   email = gohanlon@icloud.com
   signingkey = 11DDF29D2794BF10
+
+[credential]
+  helper = osxkeychain
