@@ -43,3 +43,6 @@ bind C-j split-window -v "tmux list-sessions | sed -E 's/:.*$//' | grep -v \"^$(
 
 # break out the current pane to a new session based on CWD
 bind-key C-b send-keys 'tat && exit' 'C-m'
+
+# kill the current session and switch us to another session, keeping us connected to tmux throughout
+bind-key K run-shell 'tmux switch-client -n \; kill-session -t "$(tmux display-message -p "#S")" || tmux kill-session'
