@@ -37,3 +37,6 @@ bind-key -t vi-copy Enter copy-pipe "reattach-to-user-namespace pbcopy"
 
 # -d for detached, meaning keep focus on current window rather than switching to the new one
 bind b break-pane -d
+
+# switch to session using fuzzy match
+bind C-j split-window -v "tmux list-sessions | sed -E 's/:.*$//' | grep -v \"^$(tmux display-message -p '#S')\$\" | fzf --reverse | xargs tmux switch-client -t"
