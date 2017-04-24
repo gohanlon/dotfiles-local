@@ -1,6 +1,11 @@
 set textwidth=0
 set relativenumber
 
+" Highlight all matches after entering search pattern
+set hlsearch
+" Clear highlighting of previous search pattern
+nmap <leader>h :nohlsearch<cr>
+
 nmap <leader>vr :sp $MYVIMRC<cr>
 nmap <leader>vrl :sp $MYVIMRC.local<cr>
 nmap <leader>so :source $MYVIMRC<cr>
