@@ -5,6 +5,9 @@ nmap <leader>vr :sp $MYVIMRC<cr>
 nmap <leader>vrl :sp $MYVIMRC.local<cr>
 nmap <leader>so :source $MYVIMRC<cr>
 
+" autoindent the whole file
+nmap <leader>i mmgg=G`m
+
 " instead of reaching for esc when in insert, just jk or kj
 imap jk <esc>
 imap kj <esc>
