@@ -1,6 +1,10 @@
 set textwidth=0
 set relativenumber
 
+" Case insensitive pattern matching, unless pattern contains an upcase
+set ignorecase
+set smartcase
+
 " Highlight all matches after entering search pattern
 set hlsearch
 " Clear highlighting of previous search pattern
