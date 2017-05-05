@@ -5,3 +5,6 @@
 
 [credential]
   helper = osxkeychain
+
+[alias]
+  br = branch
