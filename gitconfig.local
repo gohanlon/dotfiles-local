@@ -8,3 +8,6 @@
 
 [alias]
   br = branch
+
+[commit]
+  verbose = true
