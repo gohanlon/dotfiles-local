@@ -25,3 +25,6 @@ ensure_tmux_is_running
 
 # Homebrew's zsh-completions
 fpath=(/usr/local/share/zsh-completions $fpath)
+
+# Yarn’s binaries
+PATH="$PATH:`yarn global bin`"
