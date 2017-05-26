@@ -28,3 +28,6 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 
 # Yarn’s binaries
 PATH="$PATH:`yarn global bin`"
+
+# Use direnv to load/unload per-directory env vars from (whitelisted) .envrc files
+eval "$(direnv hook zsh)"
