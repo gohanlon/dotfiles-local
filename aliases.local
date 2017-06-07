@@ -3,5 +3,6 @@ alias gs='git status --short'
 alias ga='git add'
 alias gai='git add --interactive'
 alias gci='git commit'
+alias gcia='git commit --amend'
 
 alias be='bundle exec'
