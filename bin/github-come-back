@@ -1,0 +1,33 @@
+#!/bin/sh
+#
+# Sometimes GitHub goes down. This command tells you when it's back up.
+#
+# Uses `jq` if it's is installed, otherwise it uses `grep` in very naive way.
+# (Tip: `brew install jq`.)
+#
+# On macOS, use the `say` command to say aloud that "GitHub is up".
+
+github_up() {
+  local status_url="https://status.github.com/api/status.json"
+
+  if type "jq" &>/dev/null; then
+    curl -s $status_url | \
+      jq --exit-status 'if .status != "good" then false else true end' \
+      &>/dev/null
+  else
+    curl -s $status_url | \
+      grep -q '"status":"good"'
+  fi
+}
+
+until github_up
+do
+  # echo "github is down"
+  sleep 30
+done
+
+echo "GitHub is up"
+
+if type "say" &>/dev/null; then
+  say "git-hub is up"
+fi
