@@ -5,8 +5,6 @@ if which pyenv-vitualenv > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 
 set -o vi
 
-source ~/perl5/perlbrew/etc/bashrc
-
 bindkey -v
 
 PS1='${SSH_CONNECTION+"%{$fg_bold[green]%}%n@%m:"}%{$fg_bold[blue]%}%c%{$reset_color%}$(git_prompt_info) 
