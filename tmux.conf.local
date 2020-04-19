@@ -50,3 +50,17 @@ bind-key K run-shell 'tmux switch-client -n \; kill-session -t "$(tmux display-m
 # Caveat: Will break any tmux bindings that start with Esc
 # http://superuser.com/a/252717/65504
 set -sg escape-time 0
+
+# Install TMUX plugin manager
+if "test ! -d ~/.tmux/plugins/tpm" \
+   "run 'git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm && ~/.tmux/plugins/tpm/bin/install_plugins'"
+
+# List of plugins
+# Warning: Don't use the standard 'set -g @plugin "path"' syntax, since this file is sourced from the main
+#  config file: https://github.com/tmux-plugins/tpm/issues/57
+set -g @tpm_plugins ' \
+  tmux-plugins/tpm \
+'
+
+# Initialize TMUX plugin manager
+run -b "~/.tmux/plugins/tpm/tpm"
