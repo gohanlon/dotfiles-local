@@ -50,5 +50,3 @@ bind-key K run-shell 'tmux switch-client -n \; kill-session -t "$(tmux display-m
 # Caveat: Will break any tmux bindings that start with Esc
 # http://superuser.com/a/252717/65504
 set -sg escape-time 0
-
-run-shell ~/.tmux/plugins/tmux-yank/yank.tmux
