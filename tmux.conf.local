@@ -60,6 +60,7 @@ if "test ! -d ~/.tmux/plugins/tpm" \
 #  config file: https://github.com/tmux-plugins/tpm/issues/57
 set -g @tpm_plugins ' \
   tmux-plugins/tpm \
+  tmux-plugins/tmux-yank \
 '
 
 # Initialize TMUX plugin manager
