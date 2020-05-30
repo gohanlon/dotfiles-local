@@ -61,6 +61,7 @@ if "test ! -d ~/.tmux/plugins/tpm" \
 set -g @tpm_plugins ' \
   tmux-plugins/tpm \
   tmux-plugins/tmux-yank \
+  tmux-plugins/tmux-resurrect \
 '
 
 # Initialize TMUX plugin manager
