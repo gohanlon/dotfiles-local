@@ -23,3 +23,5 @@ imap kj <esc>
 
 nmap k gk
 nmap j gj
+
+colorscheme dim
